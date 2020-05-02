@@ -1,0 +1,19 @@
+---
+ios:
+  platform: ios
+  connection_options:
+    scrapli:
+      platform: cisco_iosxe
+      extras:
+        transport: ssh2
+        ssh_config_file: True
+        auth_strict_key: False
+    netmiko:
+      platform: cisco_ios
+      extras: {}
+    napalm:
+      extras:
+        optional_args:
+          platform: ios
+
+

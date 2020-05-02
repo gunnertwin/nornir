@@ -1,0 +1,10 @@
+---
+cisco1:
+    hostname: cisco1
+    groups:
+      - ios
+
+cisco2:
+    hostname: cisco2
+    groups:
+      - ios

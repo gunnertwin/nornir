@@ -1,0 +1,3 @@
+ip prefix-list PL_BGP_Loopback101 seq 5 permit 20.20.20.20/32
+ip prefix-list PL_BGP_Loopback101 seq 10 deny 20.20.20.30/32
+ip prefix-list PL_BGP_Loopback101 seq 15 permit 20.20.20.40/32

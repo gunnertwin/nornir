@@ -1,0 +1,15 @@
+router bgp {{ rules['bgp_asn'] }}
+ bgp router-id {{ rules['router_id'] }}
+ bgp log-neighbor-changes
+{% for entries in rules['bgp_neighbour'] %}
+ neighbor {{ entries['bgp_peer'] }} remote-as {{ entries['remote-as'] }}
+{% endfor %} 
+ address-family ipv4
+{% for entries in rules['networks'] %}
+  network {{ entries['network'] }}
+{% endfor %}
+{% for entries in rules['bgp_neighbour'] %}
+  neighbor {{ entries['bgp_peer'] }} activate
+  neighbor {{ entries['bgp_peer'] }} route-map {{ entries['route_map_id'] }} {{ entries['direction'] }}
+{% endfor %}
+ exit-address-family

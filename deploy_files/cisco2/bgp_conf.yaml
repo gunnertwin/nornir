@@ -1,0 +1,12 @@
+---
+bgp_asn: 1000
+router_id: 20.20.20.20
+bgp_neighbour:
+  - bgp_peer: 192.168.0.1
+    route_map_id: RM_BGP_NXOS1_Peer
+    direction: out
+    remote-as: 1000
+networks: 
+  - network: 20.20.20.10 mask 255.255.255.255
+  - network: 20.20.20.20 mask 255.255.255.255
+  - network: 20.20.20.30 mask 255.255.255.255

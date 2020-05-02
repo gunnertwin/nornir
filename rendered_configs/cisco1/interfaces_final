@@ -1,0 +1,12 @@
+
+interface GigabitEthernet2.50
+ description Configured by Nornir
+ encapsulation dot1Q 50 
+ ip address 192.168.0.1 255.255.255.0
+ cdp enable
+
+interface GigabitEthernet2.51
+ description Configured by Nornir
+ encapsulation dot1Q 51 
+ ip address 192.168.2.61 255.255.255.0
+ cdp enable

@@ -1,0 +1,3 @@
+{% for entries in rules['prefix_list'] %}
+ip prefix-list {{ entries['prefix_list_id'] }} seq {{ entries['sequence_id'] }} {{ entries['action'] }} {{ entries['network'] }}
+{% endfor %}

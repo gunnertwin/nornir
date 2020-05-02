@@ -1,0 +1,28 @@
+---
+loopbacks:
+- id: 101
+  ip_address: 20.20.20.10
+  mask: 255.255.255.255
+  description: Configured by Nornir
+  active: true
+- id: 102
+  ip_address: 20.20.20.20
+  mask: 255.255.255.255
+  description: Configured by Nornir
+  active: true
+- id: 103
+  ip_address: 20.20.20.30
+  mask: 255.255.255.255
+  description: Configured by Nornir
+  active: true
+interfaces:
+- id: 50
+  ip_address: 192.168.0.2
+  mask: 255.255.255.0
+  description: Configured by Nornir
+  active: true
+- id: 51
+  ip_address: 192.168.2.61
+  mask: 255.255.255.0
+  description: Configured by Nornir
+  active: false

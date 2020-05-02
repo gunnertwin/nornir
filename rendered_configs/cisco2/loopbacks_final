@@ -1,0 +1,12 @@
+
+interface Loopback101
+ description Configured by Nornir
+ ip address 20.20.20.10 255.255.255.255
+
+interface Loopback102
+ description Configured by Nornir
+ ip address 20.20.20.20 255.255.255.255
+
+interface Loopback103
+ description Configured by Nornir
+ ip address 20.20.20.30 255.255.255.255

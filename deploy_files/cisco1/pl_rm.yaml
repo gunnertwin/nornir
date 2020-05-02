@@ -1,0 +1,35 @@
+---
+prefix_list:
+  - prefix_list_id: PL_BGP_Loopback101
+    sequence_id: 5
+    action: permit
+    network: 10.10.10.10/32
+  - prefix_list_id: PL_BGP_Loopback101
+    sequence_id: 10
+    action: deny
+    network: 10.10.10.20/32
+  - prefix_list_id: PL_BGP_Loopback101
+    sequence_id: 15
+    action: permit
+    network: 10.10.10.30/32
+  - prefix_list_id: PL_BGP_Loopback102
+    sequence_id: 5
+    action: permit
+    network: 10.10.10.20/32
+  - prefix_list_id: PL_BGP_Loopback103
+    sequence_id: 50
+    action: permit
+    network: 10.10.10.30/32
+route_map:
+  - route_map_id: RM_BGP_NXOS2_Peer
+    prefix_list_id: PL_BGP_Loopback101
+    action: permit
+    sequence_id: 100
+  - route_map_id: RM_BGP_NXOS2_Peer
+    prefix_list_id: PL_BGP_Loopback102
+    action: deny
+    sequence_id: 110
+  - route_map_id: RM_BGP_NXOS2_Peer
+    prefix_list_id: PL_BGP_Loopback103
+    action: permit
+    sequence_id: 120

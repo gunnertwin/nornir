@@ -1,0 +1,11 @@
+{% for interfaces in rules['interfaces'] %}
+{% if interfaces.active == true %}
+
+interface GigabitEthernet2.{{ interfaces['id'] }}
+ description {{ interfaces['description']}}
+ encapsulation dot1Q {{ interfaces['id'] }} 
+ ip address {{ interfaces['ip_address'] }} {{ interfaces['mask'] }}
+ cdp enable
+{% else %}
+{% endif %}
+{% endfor %}

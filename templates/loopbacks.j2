@@ -1,0 +1,9 @@
+{% for loopbacks in rules['loopbacks'] %}
+{% if loopbacks.active == true %}
+
+interface Loopback{{ loopbacks['id'] }}
+ description {{ loopbacks['description']}}
+ ip address {{ loopbacks['ip_address'] }} {{ loopbacks['mask'] }}
+{% else %}
+{% endif %}
+{% endfor %}
